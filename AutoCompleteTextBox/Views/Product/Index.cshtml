@@ -1,0 +1,31 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="~/css/jquery-ui.css">
+        <title>Index</title>
+    </head>
+    <body>
+
+        <form>
+            <input type="text" id="productName" placeholder="Input Your KeyWord"/>
+        </form>
+
+
+
+        <script src="~/js/jquery.js"></script>
+        <script src="~/js/jquery-ui.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#productName').autocomplete({
+                    source: '/api/product/search'
+                });
+            });
+        </script>
+    </body>
+</html>
